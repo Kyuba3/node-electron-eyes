@@ -26,6 +26,7 @@ const App = () => {
 
   useEffect(() => {
     if(time === 0){
+      playBell();
       if(status === 'work'){
         setStatus('rest');
         setTime(20);
@@ -43,7 +44,8 @@ const App = () => {
   };
 
   const playBell = () => {
-
+    const bell = new Audio('./sounds/bell.wav');
+    bell.play();
   };
 
   const closeApp = () => {
